@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Bastion Recruitment</title>
+<meta name="description" content="Get in touch with Bastion Recruitment — Suite 814, 1 Queens Road, Melbourne 3004. Call +61 432 010 679 or email stephen@bastiongrp.com.au. Submit a vacancy or register your CV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="container nav" aria-label="Primary">
+    <a class="brand" href="index.html" aria-label="Bastion Recruitment — Home">
+      <img src="assets/img/BastionRecruitment_logo_WHITE.png" alt="Bastion Recruitment" class="brand-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="jobs.html">Find a role</a>
+      <a class="btn btn-primary" href="#employer">Submit a vacancy</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="jobs.html">Jobs</a>
+  <a href="contact.html" aria-current="page">Contact</a>
+  <a class="btn btn-primary" href="#employer">Submit a vacancy</a>
+</div>
+
+<main id="main">
+
+  <section class="page-hero container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
+    <span class="eyebrow reveal">Let's talk</span>
+    <h1 class="reveal" style="--i:1; max-width:780px">Start the conversation.</h1>
+    <p class="lede reveal" style="--i:2; max-width:680px; margin-top:var(--space-4)">Whether you're hiring or job-hunting, tell us what you're trying to solve and we'll get back to you within one business day.</p>
+  </section>
+
+  <!-- CONTACT DETAILS -->
+  <section class="section" style="padding-top:0">
+    <div class="container grid grid-3">
+      <div class="card reveal">
+        <div class="card-icon" aria-hidden="true">@</div>
+        <h3>Email</h3>
+        <p><a href="mailto:stephen@bastiongrp.com.au">stephen@bastiongrp.com.au</a></p>
+      </div>
+      <div class="card reveal" style="--i:1">
+        <div class="card-icon" aria-hidden="true">☎</div>
+        <h3>Phone</h3>
+        <p><a href="tel:+61432010679">+61 432 010 679</a></p>
+      </div>
+      <div class="card reveal" style="--i:2">
+        <div class="card-icon" aria-hidden="true">⚲</div>
+        <h3>Office</h3>
+        <p>Suite 814, 1 Queens Road<br>Melbourne VIC 3004</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMPLOYER FORM -->
+  <section class="section section--alt" id="employer">
+    <div class="container split">
+      <div class="reveal">
+        <span class="eyebrow">For Employers</span>
+        <h2>Submit a vacancy</h2>
+        <p class="lede" style="margin-top:var(--space-3)">Tell us about the role and the team — we'll start with a discovery conversation, not a job spec template.</p>
+      </div>
+      <form class="card reveal" style="--i:1" data-validate novalidate>
+        <div class="form-status" role="status"></div>
+        <div class="stack">
+          <div class="field">
+            <label for="employer-name">Full name</label>
+            <input type="text" id="employer-name" name="name" required autocomplete="name">
+            <span class="field-error">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label for="employer-email">Work email</label>
+            <input type="email" id="employer-email" name="email" required autocomplete="email">
+            <span class="field-error">Please enter a valid email address.</span>
+          </div>
+          <div class="field">
+            <label for="employer-company">Company</label>
+            <input type="text" id="employer-company" name="company" required autocomplete="organization">
+            <span class="field-error">Please enter your company name.</span>
+          </div>
+          <div class="field">
+            <label for="employer-message">Tell us about the role</label>
+            <textarea id="employer-message" name="message" required></textarea>
+            <span class="field-error">Please add a few details about the vacancy.</span>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Submit vacancy</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CANDIDATE FORM -->
+  <section class="section" id="candidate">
+    <div class="container split">
+      <form class="card reveal" data-validate novalidate>
+        <div class="form-status" role="status"></div>
+        <div class="stack">
+          <div class="field">
+            <label for="candidate-name">Full name</label>
+            <input type="text" id="candidate-name" name="name" required autocomplete="name">
+            <span class="field-error">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label for="candidate-email">Email</label>
+            <input type="email" id="candidate-email" name="email" required autocomplete="email">
+            <span class="field-error">Please enter a valid email address.</span>
+          </div>
+          <div class="field">
+            <label for="subject">Role / category of interest</label>
+            <input type="text" id="subject" name="subject" placeholder="e.g. Engineering, Defence, Construction">
+          </div>
+          <div class="field">
+            <label for="candidate-message">A little about you</label>
+            <textarea id="candidate-message" name="message" required placeholder="Your background, the kind of role you're after, and your career aspirations."></textarea>
+            <span class="field-error">Please tell us a little about yourself.</span>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Register your interest</button>
+        </div>
+      </form>
+      <div class="reveal" style="--i:1">
+        <span class="eyebrow">For Jobseekers</span>
+        <h2>Register your CV</h2>
+        <p class="lede" style="margin-top:var(--space-3)">We're here to help you find your happy place. Register your interest and we'll have a real conversation about your motivations and career aspirations — plus $500 towards training and development when we place you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
+  <section class="section section--alt">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="eyebrow">Follow along</span>
+        <h2>Stay in the loop.</h2>
+        <div class="social-row flex-center" style="margin-top:var(--space-5)">
+          <a href="https://www.linkedin.com/company/bastion-grp/" aria-label="Bastion Recruitment on LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://www.facebook.com/Bastion-Group-105987771581233" aria-label="Bastion Recruitment on Facebook" target="_blank" rel="noopener">f</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/img/BastionRecruitment_logo_WHITE.png" alt="Bastion Recruitment" class="footer-brand-logo">
+        </a>
+        <p class="lede" style="margin-top:var(--space-4)">A boutique recruitment consultancy defending human-centred conversation across Defence, Manufacturing and Power.</p>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/company/bastion-grp/" aria-label="Bastion Recruitment on LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://www.facebook.com/Bastion-Group-105987771581233" aria-label="Bastion Recruitment on Facebook" target="_blank" rel="noopener">f</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="stack">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="jobs.html">Job board</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For you</h4>
+        <ul class="stack">
+          <li><a href="contact.html#employer">Submit a vacancy</a></li>
+          <li><a href="contact.html#candidate">Register your CV</a></li>
+          <li><a href="jobs.html">Browse open roles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="stack">
+          <li><a href="mailto:stephen@bastiongrp.com.au">stephen@bastiongrp.com.au</a></li>
+          <li><a href="tel:+61432010679">+61 432 010 679</a></li>
+          <li>Suite 814, 1 Queens Road, Melbourne 3004</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Bastion Recruitment. All rights reserved.</span>
+      <span>Melbourne, Australia</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
