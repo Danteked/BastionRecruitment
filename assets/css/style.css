@@ -346,7 +346,7 @@ main { padding-top: 0; }
 .img-accordion-item {
   position: relative; flex: 0.3 0 0%; min-width: 60px;
   border-radius: var(--radius-lg); overflow: hidden; cursor: pointer;
-  background-size: cover; background-position: center;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
   border: 1px solid var(--line);
   transition: flex-grow 700ms var(--ease), flex-basis 700ms var(--ease);
 }
