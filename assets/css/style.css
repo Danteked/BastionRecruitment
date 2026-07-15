@@ -342,6 +342,7 @@ main { padding-top: 0; }
 .img-accordion {
   display: flex; align-items: stretch; justify-content: center;
   gap: var(--space-3); height: 560px; max-width: 100%;
+  touch-action: pan-y;
 }
 .img-accordion-item {
   position: relative; flex: 0.3 0 0%; min-width: 60px;

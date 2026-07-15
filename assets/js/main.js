@@ -78,19 +78,58 @@ function initYear() {
 
 /* ---------------- Interactive image accordion ---------------- */
 function initImageAccordion() {
+  const container = document.querySelector('.img-accordion');
   const items = document.querySelectorAll('.img-accordion-item');
   if (!items.length) return;
 
+  const activate = (item) => {
+    items.forEach((el) => el.classList.remove('is-active'));
+    item.classList.add('is-active');
+  };
+
   items.forEach((item) => {
-    item.addEventListener('mouseenter', () => {
-      items.forEach((el) => el.classList.remove('is-active'));
-      item.classList.add('is-active');
-    });
-    item.addEventListener('focus', () => {
-      items.forEach((el) => el.classList.remove('is-active'));
-      item.classList.add('is-active');
-    });
+    item.addEventListener('mouseenter', () => activate(item));
+    item.addEventListener('focus', () => activate(item));
+    item.addEventListener('click', () => activate(item));
   });
+
+  if (!container) return;
+
+  // Touch: let a finger drag across the strip to "scrub" between panels,
+  // since there's no hover on phones. Only hijacks the gesture once it's
+  // clearly horizontal, so normal page scrolling still works.
+  let dragging = false;
+  let startX = 0;
+  let startY = 0;
+  let horizontal = false;
+
+  container.addEventListener('touchstart', (e) => {
+    dragging = true;
+    horizontal = false;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+
+  container.addEventListener('touchmove', (e) => {
+    if (!dragging) return;
+    const touch = e.touches[0];
+    const dx = touch.clientX - startX;
+    const dy = touch.clientY - startY;
+
+    if (!horizontal) {
+      if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return;
+      horizontal = Math.abs(dx) > Math.abs(dy);
+      if (!horizontal) { dragging = false; return; }
+    }
+
+    e.preventDefault();
+    const target = document.elementFromPoint(touch.clientX, touch.clientY);
+    const item = target && target.closest('.img-accordion-item');
+    if (item) activate(item);
+  }, { passive: false });
+
+  container.addEventListener('touchend', () => { dragging = false; });
+  container.addEventListener('touchcancel', () => { dragging = false; });
 }
 
 /* ---------------- Job category filter (static cards) ---------------- */
