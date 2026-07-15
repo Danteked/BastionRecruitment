@@ -368,6 +368,7 @@ main { padding-top: 0; }
 @media (max-width: 760px) {
   .img-accordion { height: 400px; gap: var(--space-2); }
   .img-accordion-item { min-width: 44px; }
+  .img-accordion-caption { font-size: 2.2rem; bottom: var(--space-4); }
 }
 
 /* -------------------- Slideshow -------------------- */
